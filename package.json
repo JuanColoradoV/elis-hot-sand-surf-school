@@ -1,0 +1,14 @@
+{
+  "name": "elis-hot-sand-surf-school",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketing site for Eli's Hot Sand Surf School (Playa Grande & Tamarindo, Costa Rica)",
+  "scripts": {
+    "dev": "python3 -m http.server 8787 --directory site",
+    "preview": "wrangler pages dev site",
+    "deploy": "wrangler pages deploy site --project-name elis-hot-sand"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Eli's Hot Sand Surf School",
+  "short_name": "Hot Sand Surf",
+  "description": "Surf lessons in Playa Grande & Playa Tamarindo, Costa Rica.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF1E1",
+  "theme_color": "#0E5F58",
+  "icons": [
+    { "src": "assets/logo-emblem-128.png", "sizes": "128x128", "type": "image/png" },
+    { "src": "assets/logo-emblem.png", "sizes": "462x462", "type": "image/png", "purpose": "any" }
+  ]
+}

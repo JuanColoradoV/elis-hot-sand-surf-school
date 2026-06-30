@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# AI / answer-engine crawlers (good for being found via AI search)
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# EDIT: replace with your real domain
+Sitemap: https://elishotsand.com/sitemap.xml

@@ -1,0 +1,7 @@
+# Cloudflare Pages project config
+# Deploy:  npx wrangler pages deploy
+# Local:   npx wrangler pages dev
+
+name = "elis-hot-sand"
+compatibility_date = "2026-06-01"
+pages_build_output_dir = "site"
