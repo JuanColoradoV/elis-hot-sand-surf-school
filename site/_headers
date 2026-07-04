@@ -6,6 +6,11 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  # CSP allows: Google Fonts, Google Maps embed, Web3Forms (contact form), Cal.com (booking embed).
+  # Inline styles are permitted for the reveal-animation `style="--d:.."` attributes.
+  # NOTE: re-test this if you enable the Cal.com booking embed — it may load extra origins.
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' https://app.cal.com https://cal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com https://app.cal.com https://cal.com; frame-src https://www.google.com https://cal.com https://app.cal.com; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests
 
 # HTML: always revalidate so content updates show immediately
 /
