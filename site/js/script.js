@@ -272,6 +272,25 @@
       });
       if (!ok) { if (firstInvalid) firstInvalid.focus(); return; }
 
+      /* Fallback: until a real Web3Forms access key is set, funnel the inquiry
+         to WhatsApp with the details prefilled so nothing is lost. */
+      var keyInput = form.querySelector('input[name="access_key"]');
+      var key = keyInput ? keyInput.value.trim() : "";
+      if (!key || key === "YOUR_ACCESS_KEY") {
+        var gv = function (sel) { var el = form.querySelector(sel); return el ? el.value.trim() : ""; };
+        var wa =
+          "Hi Eli! I'd like to book a surf lesson." +
+          "\nName: " + gv("#name") +
+          "\nEmail: " + gv("#email") +
+          (gv("#dates") ? "\nDates: " + gv("#dates") : "") +
+          (gv("#message") ? "\nMessage: " + gv("#message") : "");
+        window.open("https://wa.me/50688007880?text=" + encodeURIComponent(wa), "_blank", "noopener");
+        form.classList.add("is-sent");
+        successEl.hidden = false;
+        successEl.focus();
+        return;
+      }
+
       setLoading(true);
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
