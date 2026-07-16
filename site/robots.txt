@@ -16,4 +16,4 @@ User-agent: Google-Extended
 Allow: /
 
 # EDIT: replace with your real domain
-Sitemap: https://elishotsand.com/sitemap.xml
+Sitemap: https://hotsandsurfschool.com/sitemap.xml
