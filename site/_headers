@@ -5,8 +5,9 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   # CSP allows: Google Fonts, Google Maps embed, Web3Forms (contact form), Cal.com (booking embed).
   # Inline styles are permitted for the reveal-animation `style="--d:.."` attributes.
   # NOTE: re-test this if you enable the Cal.com booking embed — it may load extra origins.
